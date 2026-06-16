@@ -1,20 +1,71 @@
-<! DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
-<title>Task Managemen</title>
+    <title>System Management Cases and project</title>
+    <style>
+        /* Reset default margins and paddings */
+        html, body {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Container for the logo */
+        .logo-container {
+            width: 100%;
+            background-color: #ffffff; /* Change background color if needed */
+            padding: 10px 20px;
+            box-sizing: border-box;
+            display: flex;
+            align-items: center;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        /* Styling for the logo image */
+        .logo-container img {
+            height: 40px; /* Adjust height to fit your logo */
+            width: auto;
+        }
+
+        /* Container to make the iframe fill the rest of the screen */
+        .iframe-container {
+            flex-grow: 1;
+            width: 100%;
+            position: relative;
+        }
+
+        iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+    </style>
 </head>
 <body>
-<iframe src="https://script.google.com/macros/s/AKfycbyfDFsc1OEhXE6yCx5ja3N5Q4dtyJevaM2ts_13JiiYQRhAtklCewO_kprcV3e5v1G6/exec"
-width="100%"
-height="100%"
-allowfullscreen="true"
-style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; border: none;"></iframe>
-<script>
-window.onload = function() {
-document.querySelector('iframe').requestFullscreen().catch((err) => {
-console.error( Error attempting to enable full-screen mode: ${err.message} );
-});
-};
-</script>
+
+    <div class="logo-container">
+        <img src="https://i.postimg.cc/Xq3pQBHx/NP-logo32x32.png" alt="System Management Logo">
+    </div>
+
+    <div class="iframe-container">
+        <iframe src="https://script.google.com/macros/s/AKfycbyfDFsc1OEhXE6yCx5ja3N5Q4dtyJevaM2ts_13JiiYQRhAtklCewO_kprcV3e5v1G6/exec"
+                allowfullscreen="true">
+        </iframe>
+    </div>
+
+    <script>
+    window.onload = function() {
+        // Fullscreen request usually requires a direct user gesture (like a click), 
+        // but keeping your original logic here in case it's running in an environment that allows it.
+        document.querySelector('iframe').requestFullscreen().catch((err) => {
+            console.error(`Error attempting to enable full-screen mode: ${err.message}`);
+        });
+    };
+    </script>
 </body>
 </html>
